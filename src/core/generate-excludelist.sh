@@ -17,7 +17,7 @@ tempfile=$(mktemp -t linuxdeploy-excludelist.h-XXXXXX)
 log_prefix="-- [$(basename $0)]"
 
 echo "$log_prefix downloading excludelist from GitHub"
-url="https://raw.githubusercontent.com/probonopd/AppImages/master/excludelist"
+url="https://raw.githubusercontent.com/knarfS/linuxdeploy/master/src/core/excludelist"
 blacklisted=($(wget --quiet "$url" -O - | sed 's|#.*||g' | sort | uniq))
 
 # sanity check
